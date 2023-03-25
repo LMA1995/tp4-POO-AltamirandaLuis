@@ -31,17 +31,18 @@ let cuenta = {
         }
         else{
             this.saldo-=cantidad;
-            document.write(`<br> Se extrajero ${cantidad} pesos`)
+            document.write(`<br> Se extrajeron $ ${cantidad} pesos`)
             this.informar();
         }
 
     },
     informar : function(){
             document.write(`<br>Titular de la cuenta: ${this.titular}`);
-            document.write(`<br>Saldo Actual :${this.saldo}`);
+            document.write('<p>-------------------------------</p>')
+            document.write(`<br>Saldo Actual : $${this.saldo} `);
     }
 }
 document.write(`<br>El titular de la cuenta es ${cuenta.titular}`)
-document.write(`<br>El monto actual de la cuenta es${ cuenta.saldo }`)
+document.write(`<br>El monto inicial de la cuenta es $ ${ cuenta.saldo }`)
 cuenta.agregar();
 cuenta.extraer();
